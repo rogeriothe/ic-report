@@ -1,15 +1,15 @@
-# AGENT.md - ic-reports (PDF/Excel/CSV)
+# AGENT.md - tabularium (PDF/Excel/CSV)
 
 ## Visao geral
-O pacote `ic-reports` em `src/ic_reports` fornece uma classe base `Report` para gerar tabelas em PDF (FPDF) e exportar para Excel/CSV (pandas). O fluxo padrao e: criar uma subclasse, implementar `layout()` e `data()`, e chamar `generate()`.
+O pacote `tabularium` em `src/tabularium` fornece uma classe base `Report` para gerar tabelas em PDF (FPDF) e exportar para Excel/CSV (pandas). O fluxo padrao e: criar uma subclasse, implementar `layout()` e `data()`, e chamar `generate()`.
 
 ## Arquivos principais
-- `src/ic_reports/report.py`: classe base `Report` (renderizacao, layout, agrupamento, PDF/Excel/CSV).
-- `src/ic_reports/gridbox.py`: utilitario `GridBox` para quadros/cartoes.
-- `src/ic_reports/utils.py`: helpers de formatacao e leitura de campos.
-- `src/ic_reports/constants.py`: `REPORT_PDF`, `REPORT_EXCEL`, `REPORT_CSV`.
-- `src/ic_reports/errors.py`: `ReportError`, `ReportEmptyError`.
-- `src/ic_reports/fonts/*`: fontes Calibri embarcadas no PDF.
+- `src/tabularium/report.py`: classe base `Report` (renderizacao, layout, agrupamento, PDF/Excel/CSV).
+- `src/tabularium/gridbox.py`: utilitario `GridBox` para quadros/cartoes.
+- `src/tabularium/utils.py`: helpers de formatacao e leitura de campos.
+- `src/tabularium/constants.py`: `REPORT_PDF`, `REPORT_EXCEL`, `REPORT_CSV`.
+- `src/tabularium/errors.py`: `ReportError`, `ReportEmptyError`.
+- `src/tabularium/fonts/*`: fontes Calibri embarcadas no PDF.
 
 ## Fluxo basico de uso
 1) Defina `params` como dict simples (ex: format, orientation).
@@ -19,7 +19,7 @@ O pacote `ic-reports` em `src/ic_reports` fornece uma classe base `Report` para 
 Exemplo:
 ```python
 from collections import OrderedDict
-from ic_reports import Report, REPORT_PDF
+from tabularium import Report, REPORT_PDF
 
 class SimpleReport(Report):
     def layout(self):
@@ -86,7 +86,7 @@ Helpers:
 - `box()` (context manager): cria quadros via `GridBox`.
 
 ## Exportacao (PDF/Excel/CSV)
-- PDF: FPDF + fontes Calibri (`src/ic_reports/fonts`).
+- PDF: FPDF + fontes Calibri (`src/tabularium/fonts`).
 - Excel: `pandas.ExcelWriter`, largura de coluna baseada em `w_calc`.
 - CSV: separador `;`, decimal `,`, encoding `cp1252`.
 

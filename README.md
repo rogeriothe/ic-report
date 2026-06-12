@@ -1,10 +1,10 @@
-# ic-reports
+# tabularium
 
 Reusable PDF/Excel/CSV reporting helpers based on FPDF. The package provides a simple base class (`Report`) with grouping, totals, and layout rules.
 
 ## Install (uv)
 ```bash
-uv pip install ic-reports
+uv pip install tabularium
 ```
 
 For local development:
@@ -17,7 +17,7 @@ uv pip install -e .
 ## Quick start
 ```python
 from collections import OrderedDict
-from ic_reports import Report, REPORT_PDF
+from tabularium import Report, REPORT_PDF
 
 class SimpleReport(Report):
     def layout(self):

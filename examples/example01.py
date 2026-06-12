@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import OrderedDict
 
-from ic_reports import REPORT_PDF, Report
+from tabularium import REPORT_PDF, Report
 
 
 class ProductReport(Report):

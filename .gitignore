@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 *.pyd
 *.so
+*.pkl
 *.egg-info/
 .eggs/
 

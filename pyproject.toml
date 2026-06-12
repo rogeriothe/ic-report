@@ -1,12 +1,12 @@
 [project]
-name = "ic-reports"
+name = "tabularium"
 version = "0.1.0"
 description = "Reusable PDF/Excel/CSV reporting helpers based on FPDF."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
-  { name = "IC Reports Maintainers" }
+  { name = "Tabularium Maintainers" }
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -20,6 +20,7 @@ classifiers = [
 dependencies = [
   "build>=1.4.0",
   "fpdf>=1.7.2",
+  "openpyxl>=3.1.0",
   "pandas>=1.3.4",
   "pkginfo>=1.12.1.2",
   "twine>=6.2.0",
@@ -32,22 +33,22 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://example.com/ic-reports"
-Repository = "https://example.com/ic-reports"
+Homepage = "https://blog.solucaoti.net.br/tabularium"
+Repository = "https://blog.solucaoti.net.br/tabularium"
 
 [build-system]
 requires = ["hatchling>=1.20.0"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/ic_reports"]
+packages = ["src/tabularium"]
 include = [
-  "src/ic_reports/fonts/*.ttf"
+  "src/tabularium/fonts/*.ttf"
 ]
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "src/ic_reports/fonts/*.ttf",
+  "src/tabularium/fonts/*.ttf",
   "examples/**",
   "docs/**",
   "README.md",

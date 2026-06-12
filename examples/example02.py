@@ -4,8 +4,8 @@ from collections import OrderedDict
 from datetime import date
 from pathlib import Path
 
-from ic_reports import REPORT_PDF, Report
-from ic_reports.utils import get_image_size
+from tabularium import REPORT_PDF, Report
+from tabularium.utils import get_image_size
 
 
 class AcmeServiceFichaReport(Report):
